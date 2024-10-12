@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">车牌演示demo</string>
+    <string name="ip_title">相机IP填写不合法</string>
+</resources>

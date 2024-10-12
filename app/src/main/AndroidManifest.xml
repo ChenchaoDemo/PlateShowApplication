@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.eparking">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <application
+        android:allowBackup="true"
+        android:name=".jniplate.IdCardApplication"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".jniplate.MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.taobao.android.hotfix.IDSECRET"
+            android:value="335021488" />
+        <meta-data
+            android:name="com.taobao.android.hotfix.APPSECRET"
+            android:value="f2b3e2f6f2054603b7f0abeb7908ff0e" />
+        <meta-data
+            android:name="com.taobao.android.hotfix.RSASECRET"
+            android:value="MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDDHwYhTg6CJ6yvoSEqG1AmgSwI/+Y5kUQIx+g5Hi0/zq5tP1T65wBCFF2oYe6yicnv3zbQE9KWjBmjidn6YVbFPLUDOK4Ift1wq3LGKYzOZUhlfyXVjsBoGHwlfXtWdqlJFdxai+8yykf8zKKSqe4T5me+rvYWNIOukevhCAXZbVtshJ+uppxh0HP3k2eSubZTqPA1ZS/fAF0wEzAaQyGsNW2rPDjQO5eOr8Ur0DkofQDl0JM1NniSQFaeQ4qCvkihAsbqgI6xpNZoSDXq7yiutbykTf9rcvrkly60+7Y7OXtmBqmHxzh0dq/M7odCWuOdxw20shACaSpZ+RJHjyCPAgMBAAECggEATKrpBrcb/kpGkS/3zwqyYJ7KxbJ/LMmGeQjLl33i+7pjUSvcYUXZFR3ZeysX1nFLtoP3jqTrTxo3jMnCq54JsTBcU6q2v0HSEs5bJ7/1wreLTc46+IHB2mUcisKWbu/rLnt3fOCVGVjgFlX13zkEAi+7PfKTYUA7KaHOlDpJyhd9e9GOhxoQ9YMmhkrZRLXHDNM4kU6xj17xAVfMpAqQiNdU38+DuQsurjv2cLa9LAle5J7KyX0g4ibbPAkI8zZyJ1FKA1baY/BuZfBDUm55DsU0PIa3I3IeoWTh1j/6dbYo7LI6NkEa2ETxUvxUpLBjPIcI5101cUo1chZ5poTvEQKBgQDg6isCSQCFISyqkQUB1cX9cDpcLmc0xfyUS1AjAhx95/I5WkNKDKPxQvgbT4KzBUwRbU5KiFvGAMIbxI4yUOrctd2S9vD8zB0iZ2UwSjGopTCyCMiQsuAgUVj4IpQRSwnN0AUd8raGVY1aV0Cu4/AHw0TKrYsWICZ0tyV4eh6zdwKBgQDeFrbrxzUYwgFxpNC17fPalWjResRAr8VCgOIMaPPIr1FBHALKCPvpNPmjO55q//GR5I4FRR31A3u7Ez8NacqzCAznKHhW8kbVGDZtazK2wISGQDrs4pz0FuvTqfpIQgwU6HA0FWUli9I5ZVvaP17H4dfF7ABTdeIhvtJ9bg5RqQKBgBnx6VQyJ6Uz1ns2j2VOy7AYqiLIF4+25xQUPAJN1AuSHhcPmoOIQcErAIPmACW2jrfT7Bwc7rlAjSO24NBdFTqwoAa8BcCjqxi05K9VX7UcmSlwafKHL+OKfsDg/EOibFcZj/2MahHE/LFXL1b9ZEsA84aNzmWW/9im5+Ol8rSxAoGAMNeUAQR9g+Vexex2Thx3zbGgLLmwIX3GhxqrHAmU26Ta3NPZNS+Gn0IcSK7a5zNEoE5AgZ4yuWi7tGfGLSAACSGTHN9En/KGa2T4y1WRAKoUOyYzD1fDJtdHo/Q06+FCoPKBgqLV7Mz0PdUxvyzCnnjnqEp/w9sgEUXTKuyiT4kCgYEAqyiC0ouUi/t+7kofimGcyCRsVSgwtIfTqm8Ws3eoqPj4Xc+E0RDKHCrrQoqWQLZo18aifCeBlFHp6nixww2U5HUiBPnaahjtDOBICsyUUXy7XVsf7MfeDvUWvjSq+NYPXlZ99DgBdZPtuHGuqw9BnOkSEY414j/OCrYBtjp2LXo=" />
+    </application>
+
+</manifest>

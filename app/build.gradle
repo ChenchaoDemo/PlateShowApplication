@@ -1,0 +1,62 @@
+plugins {
+    id 'com.android.application'
+}
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.0"
+
+    defaultConfig {
+        applicationId "com.eparking.jniplate"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            //热修复支持五种
+            abiFilters 'arm64-v8a', 'armeabi', 'armeabi-v7a', 'x86', 'x86_64'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+}
+
+dependencies {
+    implementation  rootProject.glide
+    annotationProcessor rootProject.glideProcessor
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'com.google.android.material:material:1.0.0'
+
+    implementation 'com.aliyun.ams:alicloud-android-hotfix:3.4.1'
+
+    implementation 'org.videolan.android:libvlc-all:3.5.1'
+
+
+//    implementation 'com.github.NodeMedia:NodeMediaClient-Android:3.2.8'
+    implementation 'com.github.NodeMedia:NodeMediaClient-Android:2.8.4'
+
+
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    //debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+}

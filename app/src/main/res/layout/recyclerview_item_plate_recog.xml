@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/cameraIp"
+            android:layout_width="180dp"
+            android:layout_height="36dip"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_edittext"
+            android:hint="请输入相机Ip"
+            android:singleLine="true"
+            android:clickable="false"
+            android:enabled="false"
+            android:focusable="false"
+            android:textColorHint="#AAAAAA"
+            android:textSize="15dip"
+            app:layout_constraintLeft_toRightOf="@+id/sample_text"
+            app:layout_constraintTop_toBottomOf="@+id/sample_imageView" />
+
+        <ImageView
+            android:id="@+id/sample_imageView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="visible"
+            app:layout_constraintDimensionRatio="h,16:9"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/sample_text"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="18dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sample_imageView" />
+
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/startRecognize"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="开始识别"
+            android:textColor="@color/textColor"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/setTrigger"
+            app:layout_constraintTop_toBottomOf="@+id/cameraIp" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/setTrigger"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="手动触发识别"
+            android:textColor="@color/textColor"
+            app:layout_constraintLeft_toRightOf="@+id/startRecognize"
+            app:layout_constraintRight_toLeftOf="@+id/stopRecognize"
+            app:layout_constraintTop_toBottomOf="@+id/cameraIp" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/stopRecognize"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="停止识别"
+            android:textColor="@color/textColor"
+            app:layout_constraintLeft_toRightOf="@+id/setTrigger"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cameraIp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <data>
+
+    </data>
+</layout>

@@ -1,0 +1,54 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext {
+        agp_version = '7.2.0'
+    }
+    repositories {
+        maven {
+            url 'https://maven.aliyun.com/nexus/content/groups/public/'
+        }
+        maven { url 'https://jitpack.io' }
+
+        google()
+        mavenCentral()
+
+        jcenter()
+        maven {         // 添加Maven仓库地址
+            url 'https://maven.aliyun.com/nexus/content/repositories/releases/'
+        }
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:$agp_version"
+        // 添加emas-services插件
+        classpath 'com.aliyun.ams:emas-services:1.0.4'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        maven {
+            url 'https://maven.aliyun.com/nexus/content/groups/public/'
+        }
+        maven { url 'https://jitpack.io' }
+        google()
+        mavenCentral()
+
+        jcenter()
+        maven {         // 添加Maven仓库地址
+            url 'https://maven.aliyun.com/nexus/content/repositories/releases/'
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+ext {
+/**
+ * glide图片加载框架
+ */
+    glide = 'com.github.bumptech.glide:glide:4.11.0'
+    glideProcessor = 'com.github.bumptech.glide:compiler:4.11.0'
+}
